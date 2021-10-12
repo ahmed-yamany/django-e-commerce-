@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{#{% load bootstrap4 %}#}
+
+<!-- bradcam_area  -->
+{% block content %}
+
+
+
+
+     <section class="singin">
+      <!-- Start all singin -->
+      <div class="allsingin">
+        <!-- Start singin-1 -->
+        <div class="singin-1">
+            {% if request.user.is_authenticated and request.user.username == profile.username %}
+
+                <h1 class="titlelog"> Hello {{ profile.username }}</h1>
+            {% elif request.user.is_authenticated and request.user.username != profile.username and profile.hide_information != True%}
+                <h1 class="titlelog"> Welcome in {{ profile.username }}'s Profile</h1>
+
+            {% endif %}
+          <!-- Start content -->
+          <div class="singincontent">
+
+         <div class="job_details_area">
+        <div class="container">
+
+          <!-- Start contentnew -->
+          <div class="contentnew">
+            <h2 class="cont">You Can Edit Your Profile</h2>
+            <!-- Start form new -->
+{#            <div class="formnew">#}
+
+                   {% for field in form %}
+                            {% for error in field.errors %}
+                              <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+                    {% endfor %}
+
+              {% if request.user.is_authenticated and request.user.username == profile.username %}
+
+                  <form class="row g-3 " method="post">
+                        {% csrf_token %}
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="firstname" value="{{ profile.firstname }}">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="inputPassword4" name="lastname" value="{{ profile.lastname }}">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">UserName</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="username" value="{{ profile.username }}">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="inputPassword4" name="email" value="{{ profile.email }}">
+                      </div>
+
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="phone_number" value="{{ profile.phone_number }}">
+                      </div>
+                  {% load static %}
+                {% load countries %}
+                {% get_countries as countries %}
+
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Country</label>
+                        <select id="inputState" class="form-select" name="country" >
+                            <option selected>{{ profile.country }}</option>
+
+                            {% for country in countries %}
+
+                                    <option value="{{ country.name }}">{{ country.name }}</option>
+
+                            {% endfor %}
+
+                        </select>
+                      </div>
+                 <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" name="hide_information" {% if profile.hide_information == True %} checked {% endif %}>
+                      <label class="form-check-label" for="gridCheck">
+                        Hide informations
+                      </label>
+                    </div>
+                  </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Edit</button>
+                      </div>
+                    </form>
+
+              {% elif request.user.is_authenticated and request.user.username != profile.username and profile.hide_information != True%}
+                  <form class="row g-3 ">
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">First Name:</label>
+                        <span>{{ profile.firstname }}</span>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Last Name:</label>
+                        <span>{{ profile.lastname }}</span>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">UserName: </label>
+                        <span>{{ profile.username }}</span>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">E-mail: </label>
+                        <span>{{ profile.email }}</span>
+                      </div>
+
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Phone Number: </label>
+                        <span>{{ profile.phone_number }}</span>
+                      </div>
+
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">Country</label>
+                        <span>{{ profile.country }}</span>
+                      </div>
+
+
+                    </form>
+
+              {% elif request.user.is_authenticated and request.user.username != profile.username and profile.hide_information == True%}
+                  <h1>Sorry this profile is protected and you are not friends</h1>
+
+              {% else %}
+                  <h1>noce</h1>
+              {% endif %}
+
+
+            </div>
+
+            <!-- End form new -->
+          </div>
+          <!-- End contentnew -->
+        </div>
+
+
+
+                    <div>
+{#                        <a href='{% url 'accounts:profile_edit' %}' class="boxed-btn3 w-100">Edit profile</a>#}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+          </div>
+          <!-- End content -->
+        </div>
+
+        <!-- End singin-1 -->
+
+      </div>
+
+      <!-- End all singin -->
+    </section>
+{% endblock content %}

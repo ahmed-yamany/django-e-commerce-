@@ -1,0 +1,142 @@
+:root {
+  --red: #dc3545;
+  --white: #fff;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --danger: #dc3545;
+  --white-1: #eaeaea;
+}
+
+/****** Start allcontact ******/
+.allcontact {
+  margin: 50px 0;
+}
+
+.allcontact .containercontact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--white-1);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+section {
+  padding: 2rem;
+}
+
+.allcontact .containercontact .contact-1 .formcontact .allform-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allcontact .containercontact .contact-1 .formcontact .allform-1 .form-1 {
+  margin-right: 10px;
+}
+
+.allcontact
+  .containercontact
+  .contact-1
+  .formcontact
+  .allform-1
+  .form-1
+  .inputcontact {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--secondary);
+  outline: none;
+  margin: 10px 0;
+}
+
+.allcontact .containercontact .contact-1 .formcontact .allform-1 .form-1 label {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gray-dark);
+}
+
+.allcontact
+  .containercontact
+  .contact-1
+  .formcontact
+  .allform-1
+  .form-1
+  label
+  span {
+  color: var(--red);
+  font-size: 25px;
+}
+
+.allcontact .containercontact .contact-1 .formcontact .text {
+  width: 99%;
+  height: 100%;
+  resize: none;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.allcontact .containercontact .contact-1 .formcontact textarea::placeholder {
+  font-size: 18px;
+}
+
+.allcontact .containercontact .contact-1 .formcontact .btn-1 {
+  width: 140px;
+  height: 45px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--primary);
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.allcontact .containercontact .contact-1 .formcontact .btn-1:hover {
+  background-color: transparent;
+  color: var(--gray-dark);
+  cursor: pointer;
+}
+
+.text-1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--danger);
+  margin-bottom: 20px;
+}
+
+.allcontact .containercontact .contact-2 .contentcontact-2 h2 {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--gray-dark);
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.allcontact .containercontact .contact-2 .contentcontact-2 h2 i {
+  background-color: var(--primary);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px;
+  color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  .allcontact .containercontact .contact-1 .formcontact .allform-1 .form-1 {
+    width: 100%;
+  }
+
+  .allcontact .containercontact {
+    padding: 30px 20px;
+  }
+
+  .allcontact .containercontact .contact-1 .formcontact .text {
+    width: 97%;
+  }
+}
+
+/***** End all contact ********/

@@ -1,0 +1,200 @@
+:root {
+  --white: #fff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --dark: #141a20;
+  --white-1: #eaeaea;
+}
+
+/******* Start alladdver *****/
+.all .main-1 .alladdver {
+  background: url(/images/electo/img2_002.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+  border: 1px solid var(--white-1);
+  background-color: var(--white);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.all .main-1 .alladdver .contentadd {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.all .main-1 .alladdver .contentadd h2 {
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.all .main-1 .alladdver .contentadd .btn-1 {
+  width: 130px;
+  height: 40px;
+  background-color: var(--warning);
+  color: var(--dark);
+  border: 1px solid var(--warning);
+}
+
+/**** End alladdver *********/
+
+/*** Start allmoredetails *****/
+
+.all .main-2 .allmaindetails {
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+
+  border: 2px solid var(--white-1);
+  background-color: var(--white);
+}
+
+.all .main-2 .allmoredetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  padding: 20px 0;
+  grid-gap: 2.5rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media screen and (max-width: 359px) {
+  .all .main-2 .allmaindetails {
+    display: none;
+  }
+}
+
+.all .main-2 .allmoredetails .moreimage img {
+  width: 100%;
+  border: 1px solid var(--info);
+  background-color: var(--info);
+  border-radius: 10px;
+}
+
+.all .main-2 .allmoredetails .moreimage .allimagedtails {
+  padding-top: 10px;
+}
+
+.all .main-2 .allmoredetails .moreimage .allimagedtails img {
+  width: 80px;
+  margin-right: 10px;
+  margin: 8px 0;
+}
+
+.all .main-2 .allmoredetails .contantdetails h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.all .main-2 .allmoredetails .contantdetails .contnew {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.all .main-2 .allmoredetails .contantdetails .contnew .stars i {
+  font-size: 17px;
+  color: var(--warning);
+}
+
+.all .main-2 .allmoredetails .contantdetails .contnew span {
+  font-size: 15px;
+  color: var(--gray-dark);
+  margin-left: 10px;
+}
+
+.all .main-2 .allmoredetails .contantdetails h2 {
+  font-size: 15px;
+  color: var(--gray-dark);
+}
+
+.all .main-2 .allmoredetails .contantdetails h2 span {
+  color: var(--danger);
+}
+
+.all .main-2 .allmoredetails .contantdetails p {
+  font-size: 15px;
+  color: var(--secondary);
+  padding: 10px 0;
+}
+
+.all .main-2 .allmoredetails .contantdetails .allicondtails {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 2px solid var(--white-1);
+  border-bottom: 2px solid var(--white-1);
+  padding: 10px 0;
+}
+
+.all .main-2 .allmoredetails .contantdetails .allicondtails .dtaillsnum {
+  display: flex;
+  align-items: center;
+}
+
+.all .main-2 .allmoredetails .contantdetails .allicondtails .dtaillsnum h1,
+h2 {
+  font-size: 20px;
+}
+
+.all .main-2 .allmoredetails .contantdetails .allicondtails .dtaillsnum h1 {
+  color: var(--danger);
+}
+
+.all .main-2 .allmoredetails .contantdetails .allicondtails .dtaillsnum h2 {
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+.all .main-2 .allmoredetails .contantdetails .allicondtails .icondtails i {
+  font-size: 17px;
+  color: var(--white);
+  background-color: var(--primary);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.all .main-2 .allmoredetails .contantdetails .formdetails {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.all .main-2 .allmoredetails .contantdetails .formdetails .inptnum {
+  width: 80px;
+  height: 40px;
+  border: 1px solid var(--secondary);
+  outline: none;
+  padding: 5px;
+}
+
+.all .main-2 .allmoredetails .contantdetails .formdetails .btn-1 {
+  border: 1px solid var(--warning);
+  background: var(--warning);
+  color: var(--dark);
+  box-shadow: none;
+}
+
+.all .main-2 .allmoredetails .contantdetails .formdetails .btn-1 i {
+  color: var(--dark);
+}
+/*** End allmoredetails /*****/

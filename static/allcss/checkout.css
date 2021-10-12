@@ -1,0 +1,61 @@
+:root {
+  --white: #fff;
+  --gray-dark: #343a40;
+  --secondary: #6c757d;
+  --white-1: #eaeaea;
+}
+
+/*** Satrt checkout *****/
+.checkout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+  border: 1px solid var(--white-1);
+  background-color: var(--white);
+}
+
+.checkout .allcheck {
+  background-color: var(--white);
+}
+.checkout .allcheck .check {
+  margin: 10px 0;
+  padding: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--white-1);
+  cursor: pointer;
+}
+
+.checkout .allcheck .check details {
+  background-color: var(--white-1);
+  padding: 10px;
+}
+
+.checkout .allcheck .check details summary {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.checkout .allcheck .check details summary span {
+  border: 1px solid var(--gray-dark);
+  padding: 10px;
+  background-color: var(--gray-dark);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.checkout .allcheck .check details p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--secondary);
+  padding: 10px;
+  line-height: 2;
+}
+
+/**** End checkout *****/

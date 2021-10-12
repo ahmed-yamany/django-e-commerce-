@@ -1,0 +1,75 @@
+:root {
+  --red: #dc3545;
+  --primary: #007bff;
+  --dark: #141a20;
+}
+
+/*** Start image banner ***/
+
+.all .main-2 .imagebanner {
+  background-image: url(/images/banners/cat-banner-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.all .main-2 .imagebanner .contentbanner {
+  padding: 0 20px;
+}
+
+.all .main-2 .imagebanner .contentbanner h1 {
+  font-size: 80px;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.all .main-2 .imagebanner .contentbanner h2 {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px 0;
+  color: var(--dark);
+}
+
+.all .main-2 .imagebanner .contentbanner p {
+  font-size: 12px;
+  color: var(--dark);
+}
+
+/*** End image banner ****/
+.mainname {
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mainname a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary);
+}
+
+.mainname h2 {
+  font-size: 18px;
+  color: var(--primary);
+  font-weight: 400;
+  margin-left: 10px;
+  position: relative;
+}
+
+.mainname h2::before {
+  content: "/";
+  position: absolute;
+  color: var(--red);
+  left: -7px;
+}
+
+@media screen and (max-width: 500px) {
+  .all .main-2 .imagebanner {
+    display: none;
+  }
+}

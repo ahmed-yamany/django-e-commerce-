@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --dark: #141a20;
+  --white-1: #eaeaea;
+}
+
+/** Start all terms ****/
+
+.allterms .allterms-1 {
+  border: 1px solid var(--white-1);
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.allterms .allterms-1 h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--dark);
+  border-bottom: 2px solid var(--white-1);
+  padding: 10px 0;
+  line-height: 1.5;
+}
+
+.allterms .terms-0 {
+  margin: 20px 0;
+}
+
+.allterms .allterms-1 .terms-0 .terms-1 h2 {
+  font-size: 25px;
+  font-weight: 500px;
+  padding: 10px 0;
+  line-height: 1.5;
+}
+
+.allterms .allterms-1 .terms-0 .terms-1 p {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--secondary);
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.allterms .allterms-1 .terms-0 .terms-1 p a {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+@media screen and (max-width: 500px) {
+  .allterms .allterms-1 h1 {
+    font-size: 22px;
+  }
+
+  .allterms .allterms-1 .terms-0 .terms-1 h2 {
+    font-size: 20px;
+  }
+
+  .allterms .allterms-1 .terms-0 .terms-1 p {
+    font-size: 14px;
+  }
+}
+
+/**** End all terms *****/

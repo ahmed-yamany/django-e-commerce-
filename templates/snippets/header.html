@@ -1,0 +1,122 @@
+   <header>
+      <!-- Start head-1 -->
+      <div class="head-1">
+        <div class="allselect">
+          <select name="money" id="one">
+            <option value="1">USD</option>
+            <option value="2">EUR</option>
+            <option value="3">GBP</option>
+          </select>
+          <select name="lang" id="two">
+            <option value="1">English</option>
+            <option value="2">French</option>
+            <option value="3">Arabic</option>
+          </select>
+        </div>
+
+
+        <div class="social">
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-twitter-square"></i>
+          <i class="fa fa-linkedin-square"></i>
+          <i class="fa fa-instagram"></i>
+        </div>
+
+        </div>
+      </div>
+
+      <!-- End head-1 -->
+
+      <!-- Start head-2 -->
+      <div class="head-2">
+        <div class="logo"><i class="fa fa-shopping-bag"></i> Shop</div>
+        <div class="form">
+          <input type="text" class="input" />
+          <a href="#" class="search"><i class="fa fa-search"></i></a>
+        </div>
+          {% if request.user.is_authenticated %}
+            <div class="cart">
+            <span class="card-content">10</span>
+              <i class="fa fa-shopping-cart"></i>
+            </div>
+
+           <div class="allmenu">
+        <nav class="menu">
+
+          <li class="limenu"><a href="#"><i class="fa fa-bars"></i></a>
+          <!-- Start menupages -->
+          <div class="menupages">
+            <ul>
+              <a href="{% url 'profile' request.user.username %}">Profile</a>
+              <a href="{% url 'logout' %}">Logout</a>
+              <a href="details.html">Detail</a>
+
+            </ul>
+          </div>
+          <!-- End menupages -->
+          </li>
+        </nav>
+        <div id="toggle"><i class="fa fa-bars"></i></div>
+      </div>
+
+          {% else %}
+              <div class="allmenu">
+                  <nav class="menu">
+                      <li><a href="{% url 'login' %}">Login</a></li>
+                      <li><a href="{% url 'register' %}">Register</a></li>
+                  </nav>
+                </div>
+          {% endif %}
+      </div>
+      <!-- End head-2 -->
+    <div class="col-md-12">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}" style="text-align: center">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      <!-- Start nav menu -->
+      <div class="allmenu">
+        <nav class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Product.html">Clothing</a></li>
+          <li><a href="Product.html">Electronics</a></li>
+          <li><a href="Product.html">Watches</a></li>
+          <li><a href="Product.html">Shoes</a></li>
+          <li><a href="Product.html">Bages</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="limenu"><a href="#">Pages</a>
+          <!-- Start menupages -->
+          <div class="menupages">
+            <ul>
+              <a href="index.html">Home</a>
+              <a href="Category.html">Category</a>
+              <a href="details.html">Detail</a>         
+              <a href="Checkout.html">Chackout</a>
+              <a href="blog.html">Blog</a>
+              <a href="BlogDetail.html">Blog Detail</a>
+              <a href="Contact.html">Contact</a>
+              <a href="SingIn.html">Sing In</a>
+              <a href="Terms.html">Terms and condition</a>
+              <a href="Track.html">Track Orders</a>
+              <a href="Product.html">Product comparison</a>
+              <a href="out.html">404</a>
+            </ul>
+          </div>
+          <!-- End menupages -->
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </nav>
+        <div id="toggle"><i class="fa fa-bars"></i></div>
+      </div>
+
+      <!-- End nav menu -->
+    </header>
+    <!-- End header -->
+
+        <a href="#" class="color" id="he"><i class="fa fa-sun-o"></i></a>
+
+

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{#    {% if request.user.is_authenticated %}#}
+{#            <meta http-equiv="REFRESH" content="0;url={% url 'home:home_page' %}">#}
+{#    {% else %}#}
+    <section class="singin">
+      <!-- Start all singin -->
+      <div class="allsingin">
+        <!-- Start singin-1 -->
+        <div class="singin-1">
+          <h1 class="titlelog">Sign in</h1>
+          <!-- Start content -->
+          <div class="singincontent">
+            <h2 class="cont">Hello, SignIn to your account.</h2>
+            <div class="socialsing">
+              <a href="#" class="sing"
+                ><i class="fa fa-facebook"></i>Sing In with facebook</a
+              >
+              <a href="#" class="sing"
+                ><i class="fa fa-twitter"></i>Sing In with twitter</a
+              >
+            </div>
+            <div class="formsing">
+              <form method="post">
+                  {% csrf_token %}
+
+
+                  {% for field in form %}
+                      <p>
+                        {% for error in field.errors %}
+                          <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+                      </p>
+                  {% endfor %}
+                  {% if form.non_field_errors %}
+                    <div style="color: red">
+                      <p>{{form.non_field_errors}}</p>
+                    </div>
+
+                  {% endif %}
+
+                <label for=""> Email Address <span>*</span></label>
+                    <input type="text" class="inputsing" name="username"/>
+
+                    <label for=""> Password <span>*</span></label>
+                    <input type="password" class="inputsing" name="password"/>
+
+                  <div class="form-1">
+                    <div class="radio">
+                      <input type="radio" />
+                      <label for="">Remember me!</label>
+                    </div>
+                    <a href="{% url 'password_reset' %}">Forget Your Password?</a>
+                  </div>
+                     <div class="border-top pt-3">
+                            Wanna Join Us? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+                    </div>
+                  <input type="submit" value="LOGIN" class="btn-5" style="margin-top: 2em"/>
+
+              </form>
+            </div>
+          </div>
+          <!-- End content -->
+        </div>
+
+        <!-- End singin-1 -->
+
+      </div>
+
+      <!-- End all singin -->
+    </section>
+{#{% endif %}#}
+{% endblock %}
